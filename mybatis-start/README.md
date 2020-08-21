@@ -22,7 +22,7 @@
     public static void main(String[] args) throws IOException {
         SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream("mybatis-config.xml"));
         SqlSession sqlSession = factory.openSession();
-        User o = sqlSession.selectOne("org.shihe.mapper.getUserById",5L);
+        User o = sqlSession.selectOne("shihe.mapper.getUserById",5L);
         System.out.println(o.toString()+"====================");
 
     }
